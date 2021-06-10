@@ -63,7 +63,6 @@ def showAPKinfo(apkFile):
     file.write('permissions:' + str(apkinfo.get_permissions()) + str('\n'))
     file.write(str('\n'))
     file.close()
-    # ShellExecute_path('apkinfo.txt')
 
 
 if __name__ == '__main__':
@@ -76,3 +75,6 @@ if __name__ == '__main__':
     fileList = FindAPKFiles(currentPath)
     for file in fileList:
         showAPKinfo(file)
+
+    if isFile(fInfo):
+        ShellExecute_path(fInfo)
